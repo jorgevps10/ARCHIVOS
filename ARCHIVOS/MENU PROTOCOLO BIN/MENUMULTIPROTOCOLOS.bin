@@ -15,48 +15,49 @@ echo -e "\033[1;32m [1] \033[1;33mPANEL V2RAY V1 \033[0m"
 echo -e "\033[1;32m [2] \033[1;33mPANEL V2RAY V2 \033[0m"
 echo -e "\033[1;32m [3] \033[1;33mPANEL V2RAY V3 CUSTOM \033[0m"
 echo -e "\033[1;32m [4] \033[1;33mPANEL ADM PSIPHON \033[0m"
-echo -e "\033[1;32m [4] \033[1;33mPANEL UDP ADM \033[0m"
-echo -e "\033[1;32m [4] \033[1;33mPANEL WS-EPRO ADM \033[0m"
+echo -e "\033[1;32m [5] \033[1;33mPANEL UDP ADM \033[0m"
+echo -e "\033[1;32m [6] \033[1;33mPANEL WS-EPRO ADM \033[0m"
 msg -bar
 echo -e "\033[1;32m [0] \033[1;31m SALIR DEL MENU \033[0m"
 msg -bar
 read -p " SELECIONE UNA OPCION : " opci
 case $opci in
 
-1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V1%20-%20ADM%20RUFU/PANEL%20V2RAY%20V1.bin)
-msg -bar
-msg -ne "Enter Para Continuar" && read enter
-psimen
-;;
+1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V1%20-%20ADM%20RUFU/PANEL%20V2RAY%20V1.bin);;
+2) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V2%20-%20LACASITA/PANEL%20V2RAY%20V2.bin);;
+3) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V3%20-%20MIO/PANEL%20V2RAY%20V3.bin);;
+4) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20PSIPHON/menupsiphon2.bin);;
+5) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20UDP%20CUSTOM/menuudp.bin);;
+6) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20WS-EPRO/jorgevps10.bin);;
 
-2) udp ;;
+#2) udp ;;
 
 #3) 
 #msg -ne "Enter Para Continuar" && read enter
 #psimen
 #;;
 
-3)
-tput clear 
-msg -bar
-read -rp " $(msg -ama "${a33:-DESEA CONTINUAR CON LA DESINSTALACION? [Y/n]}:") " -e -i Y UNINS
-msg -bar
-[[ $UNINS != @(Y|y|S|s) ]] && return
-systemctl stop udp-custom &>/dev/null
-systemctl disable udp-custom &>/dev/null
-rm -rf /etc/systemd/system/udp-custom.service
-rm -rf /usr/bin/udp-custom
-rm -rf /root/udp/udp-custom
-rm -rf /root/udp/config.json
-rm -rf /etc/UDPCustom/udp-custom
-rm -rf /usr/bin/udpgw
-rm -rf /etc/systemd/system/udpgw.service
-systemctl stop udpgw &>/dev/null 
-rm -rf /usr/bin/udp
-msg -bar
-msg -ne "Enter Para Continuar" && read enter
-psimen
-;;
+#3)
+#tput clear 
+#msg -bar
+#read -rp " $(msg -ama "${a33:-DESEA CONTINUAR CON LA DESINSTALACION? [Y/n]}:") " -e -i Y UNINS
+#msg -bar
+#[[ $UNINS != @(Y|y|S|s) ]] && return
+#systemctl stop udp-custom &>/dev/null
+#systemctl disable udp-custom &>/dev/null
+#rm -rf /etc/systemd/system/udp-custom.service
+#rm -rf /usr/bin/udp-custom
+#rm -rf /root/udp/udp-custom
+#rm -rf /root/udp/config.json
+#rm -rf /etc/UDPCustom/udp-custom
+#rm -rf /usr/bin/udpgw
+#rm -rf /etc/systemd/system/udpgw.service
+#systemctl stop udpgw &>/dev/null 
+#rm -rf /usr/bin/udp
+#msg -bar
+#msg -ne "Enter Para Continuar" && read enter
+#psimen
+#;;
 
 0)
 return 0
