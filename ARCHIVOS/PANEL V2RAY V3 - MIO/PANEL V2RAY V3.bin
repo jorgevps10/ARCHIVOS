@@ -9,7 +9,7 @@ psimen () {
 tput clear  
 echo
 msg -bar
-title "\033[1;32m       MENU V2RAY V1       \033[0m"
+title "\033[1;32m       MENU V2RAY V3      \033[0m"
 msg -bar
       std='\e[1m\e[31m[OFF]'
 		if [[ $(systemctl is-active filebrowser) = 'active' ]]; then
@@ -27,9 +27,9 @@ msg -bar
 read -p " SELECIONE UNA OPCION : " opci
 case $opci in
 
-1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V1%20-%20ADM%20RUFU/v2ray.bin);;
+1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V3%20-%20MIO/v2ray.bin);;
 
-2) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V1%20-%20ADM%20RUFU/userV2ray.bin);;
+2) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V3%20-%20MIO/userV2ray.bin);;
 
 #3) 
 #msg -ne "Enter Para Continuar" && read enter

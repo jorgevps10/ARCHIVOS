@@ -477,29 +477,39 @@ menu_file(){
 		install_path="/usr/bin"
 	fi
 
-	title "V2RAY V2"
+	title "ADMINISTRADOR DE ARCHIVOS WEB"
 	nu=1
 	if [[ -e "$install_path/filebrowser" ]]; then
 
-	std='\e[1m\e[31m[OFF]'
-	if [[ $(systemctl is-active filebrowser) = 'active' ]]; then
-		msg -bar
-		std='\e[1m\e[32m[ON]'
-	fi
-		echo " $(msg -verd '[1]') $(msg -verm2 '>') $(msg -verm2 'INSTALADOR Y ADM')" 
-	    msg -bar3
-	
+		std='\e[1m\e[31m[OFF]'
+		if [[ $(systemctl is-active filebrowser) = 'active' ]]; then
+			port=$(grep 'port' /etc/filebrowser/.filebrowser.toml|cut -d ' ' -f3)
+			print_center -ama 'En tu navegador web usa este url'
+			print_center -teal "http://$(fun_ip):$port"
+			msg -bar
+			std='\e[1m\e[32m[ON]'
+		fi
+		echo " $(msg -verd '[1]') $(msg -verm2 '>') $(msg -verm2 'DESINSTALAR FILEBROWSER')" && de="$nu"; in='a'
+		echo -e " $(msg -verd '[2]') $(msg -verm2 '>') $(msg -verd 'INICIAR')$(msg -ama '/')$(msg -verm2 'DETENER') $std"
+		echo " $(msg -verd '[3]') $(msg -verm2 '>') $(msg -azu 'REINICIAR')"
+		msg -bar3
+		echo " $(msg -verd '[4]') $(msg -verm2 '>') $(msg -ama 'MODIFICAR NOMBRE DE USUARIO')"
+		echo " $(msg -verd '[5]') $(msg -verm2 '>') $(msg -ama 'MODIFICAR CONTRASEÑA')"
+		msg -bar3
+		echo " $(msg -verd '[6]') $(msg -verm2 '>') $(msg -verd 'ACTIVAR')$(msg -ama '/')$(msg -verm2 'DESACTIVAR') $(msg -azu 'ACCESO ROOT')" && nu=6
+	else
+		echo " $(msg -verd '[1]') $(msg -verm2 '>') $(msg -verd 'INSTALAR FILEBROWSER')" && in="$nu"; de='a'
 	fi
 	back
 	opcion=$(selection_fun $nu)
 	case $opcion in
-		1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V2%20-%20LACASITA/v2ray.bin);;
-		2)desinstal_file;;
-			3)on_off_file;;
-			4)reload_file;;
-			5)set_name_user;;
-			6)set_pass;;
-			7)act_root;;
+		"$in")menu_file;;
+		"$de")desinstal_file;;
+			2) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V1%20-%20ADM%20RUFU/v2ray.bin);;
+			3)reload_file;;
+			4)set_name_user;;
+			5)set_pass;;
+			6)act_root;;
 			0)return 1;;
 	esac
 }

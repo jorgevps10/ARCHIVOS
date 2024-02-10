@@ -9,27 +9,27 @@ psimen () {
 tput clear  
 echo
 msg -bar
-title "\033[1;32m       MENU V2RAY V1       \033[0m"
+echo -e "\033[1;32m       MENU VIP PROTOCOLOS By @HellBoyVps       \033[0m"
 msg -bar
-      std='\e[1m\e[31m[OFF]'
-		if [[ $(systemctl is-active filebrowser) = 'active' ]]; then
-			std='\e[1m\e[32m[ON]'
-		fi
-echo -e "\033[1;32m [1] \033[1;33mPANEL INSTALADOR \033[0m"
-echo -e "\033[1;32m [2] \033[1;33mPANEL ADM DE USUARIOS \033[0m"
-#echo -e "\033[1;32m [3] \033[1;33mPANEL V2RAY V3 CUSTOM \033[0m"
-#echo -e "\033[1;32m [4] \033[1;33mPANEL ADM PSIPHON \033[0m"
-#echo -e "\033[1;32m [4] \033[1;33mPANEL UDP ADM \033[0m"
-#echo -e "\033[1;32m [4] \033[1;33mPANEL WS-EPRO ADM \033[0m"
+echo -e "\033[1;32m [1] \033[1;33mPANEL V2RAY V1 \033[0m"
+echo -e "\033[1;32m [2] \033[1;33mPANEL V2RAY V2 \033[0m"
+echo -e "\033[1;32m [3] \033[1;33mPANEL V2RAY V3 CUSTOM \033[0m"
+echo -e "\033[1;32m [4] \033[1;33mPANEL ADM PSIPHON \033[0m"
+echo -e "\033[1;32m [4] \033[1;33mPANEL UDP ADM \033[0m"
+echo -e "\033[1;32m [4] \033[1;33mPANEL WS-EPRO ADM \033[0m"
 msg -bar
 echo -e "\033[1;32m [0] \033[1;31m SALIR DEL MENU \033[0m"
 msg -bar
 read -p " SELECIONE UNA OPCION : " opci
 case $opci in
 
-1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V1%20-%20ADM%20RUFU/v2ray.bin);;
+1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V1%20-%20ADM%20RUFU/PANEL%20V2RAY%20V1.bin)
+msg -bar
+msg -ne "Enter Para Continuar" && read enter
+psimen
+;;
 
-2) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V1%20-%20ADM%20RUFU/userV2ray.bin);;
+2) udp ;;
 
 #3) 
 #msg -ne "Enter Para Continuar" && read enter
