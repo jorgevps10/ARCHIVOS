@@ -9,7 +9,7 @@ psimen () {
 tput clear  
 echo
 msg -bar
-echo -e "\033[1;32m       MENU V2RAY V1       \033[0m"
+title "\033[1;32m       MENU V2RAY V1       \033[0m"
 msg -bar
 echo -e "\033[1;32m [1] \033[1;33mPANEL INSTALADOR \033[0m"
 echo -e "\033[1;32m [2] \033[1;33mPANEL ADM DE USUARIOS \033[0m"
