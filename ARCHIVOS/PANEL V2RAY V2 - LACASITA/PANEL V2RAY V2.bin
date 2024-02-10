@@ -23,7 +23,7 @@ msg -bar
 read -p " SELECIONE UNA OPCION : " opci
 case $opci in
 
-1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V2%20-%20LACASITA/v2ray.bin);;
+1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/modulosbin/main/v2ray.bin);;
 
 #2);;
 
