@@ -1,9 +1,4 @@
 #!/bin/bash
-ll="/usr/local/include/snaps" && [[ ! -d ${ll} ]] && exit
-l="/usr/local/lib/sped" && [[ ! -d ${l} ]] && exit
-#25/01/2021 by @Kalix1
-clear
-clear
 
 err_fun() {
     case $1 in
