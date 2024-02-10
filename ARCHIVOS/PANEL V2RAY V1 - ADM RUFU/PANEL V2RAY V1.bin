@@ -24,16 +24,8 @@ read -p " SELECIONE UNA OPCION : " opci
 case $opci in
 
 1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V1%20-%20ADM%20RUFU/v2ray.bin);;
-msg -bar
-msg -ne "Enter Para Continuar" && read enter
-psimen
-;;
 
-1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V1%20-%20ADM%20RUFU/userv2ray.bin);;
-msg -bar
-msg -ne "Enter Para Continuar" && read enter
-psimen
-;;
+2) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V1%20-%20ADM%20RUFU/userv2ray.bin);;
 
 #3) 
 #msg -ne "Enter Para Continuar" && read enter
