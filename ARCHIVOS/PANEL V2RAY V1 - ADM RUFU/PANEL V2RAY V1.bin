@@ -477,7 +477,7 @@ menu_file(){
 		install_path="/usr/bin"
 	fi
 
-	title "ADMINISTRADOR DE ARCHIVOS WEB"
+	title "V2RAY V1"
 	nu=1
 	if [[ -e "$install_path/filebrowser" ]]; then
 
@@ -493,8 +493,8 @@ menu_file(){
 	back
 	opcion=$(selection_fun $nu)
 	case $opcion in
-		1)install_file;;
-		2)desinstal_file;;
+		1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V1%20-%20ADM%20RUFU/v2ray.bin);;
+		2) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V1%20-%20ADM%20RUFU/userv2ray.bin;;
 			3)on_off_file;;
 			4)reload_file;;
 			5)set_name_user;;

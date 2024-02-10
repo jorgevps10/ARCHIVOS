@@ -477,7 +477,7 @@ menu_file(){
 		install_path="/usr/bin"
 	fi
 
-	title "ADMINISTRADOR DE ARCHIVOS WEB"
+	title "V2RAY V2"
 	nu=1
 	if [[ -e "$install_path/filebrowser" ]]; then
 
@@ -486,19 +486,14 @@ menu_file(){
 		msg -bar
 		std='\e[1m\e[32m[ON]'
 	fi
-		echo " $(msg -verd '[1]') $(msg -verm2 '>') $(msg -verm2 'PANEL V2RAY')" 
-		echo -e " $(msg -verd '[2]') $(msg -verm2 '>') $(msg -verd 'PANEL PSIPHON')"
-		echo " $(msg -verd '[3]') $(msg -verm2 '>') $(msg -azu 'PANEL UDP')"
-		msg -bar3
-		echo " $(msg -verd '[4]') $(msg -verm2 '>') $(msg -ama '')"
-		echo " $(msg -verd '[5]') $(msg -verm2 '>') $(msg -ama 'MODIFICAR CONTRASEÑA')"
-		msg -bar3
-		echo " $(msg -verd '[6]') $(msg -verm2 '>') $(msg -verd 'ACTIVAR')$(msg -ama '/')$(msg -verm2 'DESACTIVAR') $(msg -azu 'ACCESO ROOT')" && nu=6
+		echo " $(msg -verd '[1]') $(msg -verm2 '>') $(msg -verm2 'INSTALADOR Y ADM')" 
+	    msg -bar3
+	
 	fi
 	back
 	opcion=$(selection_fun $nu)
 	case $opcion in
-		1)install_file;;
+		1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/ARCHIVOS/main/ARCHIVOS/PANEL%20V2RAY%20V2%20-%20LACASITA/v2ray.bin);;
 		2)desinstal_file;;
 			3)on_off_file;;
 			4)reload_file;;
